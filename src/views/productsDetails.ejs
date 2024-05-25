@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {
+    title: 'Productos'
+}) %>
+
+    <body>
+
+        <%- include('partials/header') %>
+        <div class="carrito_body-title">
+            <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
+                    href="#">detalle</a></p>
+            <h2 class="carrito_main_title">Detalle de producto</h2>
+        </div>
+            <main class="container-general">
+                <div class="container-img">
+                    <img src="/images/img-products/<%= product.image %>" alt="">
+                </div>
+                <div class="container-info-product">
+                    <div class="container-name">
+                        <span><%= product.name %></span>
+                    </div>
+                    <div class="container-price">
+                        <span>$<%= product.price - (product.discount * product.price / 100) %></span>
+                    </div>
+                    <div class="container-description">
+                        <div class="title-decription">
+                            <h4>Descripción</h4>
+                        </div>
+                        <div class="text-description">
+                            <p><%= product.description %>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="container-reviews">
+                        <div class="title-reviews">
+                            <h4>Reseñas</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-reviews">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium cum culpa soluta corporis ipsa mollitia esse expedita eaque asperiores consequuntur consequatur impedit, molestiae voluptatum iusto unde laboriosam molestias obcaecati? </p>
+                        </div>
+                    </div>
+                    <div class="container-details-product">
+                        <div class="form-group">
+                            <select name="cantidad" id="cantidad">
+                                <option disabled selected value="">Escoge una Opción</option>
+                                <option value="medida-uno">300gr</option>
+                                <option value="medida-dos">500gr</option>
+                                <option value="medida-tres">1kg</option>
+                                <option value="medida-cuatro">2kg</option>
+                            </select>
+                        </div>
+                    </div>
+                    <span class="span_exist">Hay existencias</span>
+                    <div class="container-add-cart">
+                        <div class="container-quantity">
+                            <input class="input-quantity" type="number" placeholder="1" value="1" min="1">
+                            <div class="btn-increment-decrement">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <button class="btn-add-to-cart">
+                            <i class="fa-solid fa-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                    <div class="container-social">
+                        <span>Compartir</span>
+                        <div class="container-buttons-social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+            </main>
+
+            <!-- tengo que poner en un swiper -->
+
+            <!-- <section class="container-related-products">
+                <h2>Productos relacionados</h2>
+                <div class="card-list-products">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/images/almidon.jpeg" alt="">
+                        </div>
+                        <div class="info-card">
+                            <div class="text-products">
+                                <h3>Nike-roshe Run</h3>
+                                <p class="category">Footwear, Sneakers</p>
+                            </div>
+                            <div class="price">$85.00</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/images/almidon.jpeg" alt="">
+                        </div>
+                        <div class="info-card">
+                            <div class="text-products">
+                                <h3>Nike-roshe Run</h3>
+                                <p class="category">Footwear, Sneakers</p>
+                            </div>
+                            <div class="price">$85.00</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/images/almidon.jpeg" alt="">
+                        </div>
+                        <div class="info-card">
+                            <div class="text-products">
+                                <h3>Nike-roshe Run</h3>
+                                <p class="category">Footwear, Sneakers</p>
+                            </div>
+                            <div class="price">$85.00</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/images/almidon.jpeg" alt="">
+                        </div>
+                        <div class="info-card">
+                            <div class="text-products">
+                                <h3>Nike-roshe Run</h3>
+                                <p class="category">Footwear, Sneakers</p>
+                            </div>
+                            <div class="price">$85.00</div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            </div>
+
+            <%- include('partials/footer') %>
+
+    </body>
+
+</html>
